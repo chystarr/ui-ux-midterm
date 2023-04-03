@@ -1,33 +1,10 @@
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import Appointments from './pages/Appointments.js';
-import Reviews from './pages/Reviews.js';
+import Layout from './components/Layout.js';
+import Home from './components/Home.js';
+import About from './components/About.js';
+import Appointments from './components/Appointments.js';
+import Reviews from './components/Reviews.js';
 
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
-
-function Layout() {
-  return (
-    <div>
-    <nav>
-      <ul>
-        <li>
-          <Link to='/'>Business Name</Link>
-        </li>
-        <li>
-          <Link to='about'>About</Link>
-        </li>
-        <li>
-          <Link to='appointments'>Appointments</Link>
-        </li>
-        <li>
-          <Link to='reviews'>Reviews</Link>
-        </li>
-      </ul>
-    </nav>
-      <Outlet />
-    </div>
-  );
-}
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
