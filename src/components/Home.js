@@ -5,7 +5,7 @@ function Home() {
       (e.g. name of the practice, address, phone number) as well as navigation* to
       other parts of the site.</p>
     </div>
-  ) ;  
+  );  
 }
 
 export default Home;

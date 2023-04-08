@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-function ExternalRedirect() {
+function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) {
   return (
     <div> {/* Replace outer div element with ThemeProvider component later */}
       <Container>
@@ -23,7 +23,8 @@ function ExternalRedirect() {
               height: 400,
             }}
           >
-            text here
+            {headerText}
+            {bodyText} {/* Put this stuff in Typography!!? */}
           </Paper>
           <Box
             sx={{
@@ -34,9 +35,9 @@ function ExternalRedirect() {
               height: {xs: 100, md: 400},
             }}
           >
-            <p>Explanation</p>
+            <p>{disclaimerText}</p>
             <Button>
-              big button here
+              {buttonText}
             </Button>
           </Box>
         </Box>
