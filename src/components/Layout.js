@@ -29,21 +29,32 @@ function Layout() {
           <Toolbar disableGutters>
 
             {/*Larger screen sizes*/}
-            <Typography component={Link} to='/' sx={{ display : { xs: 'none', md: 'flex' } }}>
-              Business Name
+            <Typography variant='h6' component={Link} to='/' sx={{
+                display: { xs: 'none', md: 'flex' },
+                textDecoration: 'none',
+              }}
+            >
+              NYC Frog Clinic
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{
+                flexGrow: 1,
+                display: { xs: 'none', md: 'flex' },
+              }}
+            >
               {pages.map((page) => (
-                <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+                <Button key={page} onClick={handleCloseNavMenu} sx={{
+                    my: 2,
+                    color: 'white',
+                    display: 'block',
+                    textDecoration: 'none',
+                  }}
+                >
                   <Link to={page}>{page}</Link>
                 </Button>
               ))}
             </Box>
 
             {/*Smaller screen sizes*/}
-            <Typography component={Link} to='/' sx={{ display : { xs: 'flex', md: 'none' } }}>
-              Business Name
-            </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton size='large' onClick={handleOpenNavMenu} color='inherit'>
                 <MenuIcon />
@@ -68,10 +79,23 @@ function Layout() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu} component={Link} to={page}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                      {page.substring(0, 1).toUpperCase() + page.substring(1)}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
+              <Typography variant='h6' noWrap component={Link} to='/' sx={{
+                display : { xs: 'flex', md: 'none' },
+                mx: 2,
+                flexGrow: 1,
+                alignSelf: 'center',
+                textAlign: 'center',
+                textDecoration: 'none',
+                }}
+              >
+                NYC Frog Clinic
+              </Typography>
             </Box>
 
           </Toolbar>
