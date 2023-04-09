@@ -39,6 +39,7 @@ function Layout() {
             <Box sx={{
                 flexGrow: 1,
                 display: { xs: 'none', md: 'flex' },
+                mx: 2,
               }}
             >
               {pages.map((page) => (
