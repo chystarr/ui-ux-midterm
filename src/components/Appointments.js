@@ -2,16 +2,12 @@ import ExternalRedirect from './ExternalRedirect.js';
 
 function Appointments() {
   const headerText = "Appointments";
-  const bodyText = "Stuff about appointments. Stuff about appointments. Stuff about appointments. Stuff about appointments.";
-  const disclaimerText = "You will be redirected to an external service that we use for scheduling appointments.";
+  const bodyText = "We offer a variety of appointment types at different times, both within and outside of normal business hours, in order to accomodate our clients' busy schedules. To make viewing our current openings and scheduling an appointment easier, we've partnered with FakeAppointments.com.";
+  const disclaimerText = "You will be redirected to an external appointment scheduling service.";
   const buttonText = "Appointments";
 
   return (
     <div>
-      <p>this will navigate to an external site where patients can request appointments. You
-      should make it clear to a user of the site that this is the purpose of this part of the
-      page (the button that links to the external site should be emphasized and its action
-      clear to the user)</p>
       <ExternalRedirect headerText={headerText} bodyText={bodyText} disclaimerText={disclaimerText} buttonText={buttonText} />
     </div>
   );

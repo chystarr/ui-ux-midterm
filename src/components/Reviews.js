@@ -2,14 +2,12 @@ import ExternalRedirect from './ExternalRedirect.js';
 
 function Reviews() {
   const headerText = "Reviews";
-  const bodyText = "Stuff about reviews. Stuff about reviews. Stuff about reviews. Stuff about reviews.";
-  const disclaimerText = "You will be redirected to an external service that we use for reviews.";
+  const bodyText = "NYC Frog Clinic provides critically acclaimed frog medical care. In order to make it easier to read reviews of our practice, or leave one summarizing your own experience with us, we've partnered with FakeReviews.com.";
+  const disclaimerText = "You will be redirected to an external review service.";
   const buttonText = "Reviews";
 
   return (
     <div>
-      <p>Similar to the appointment requests, this should be providing a link to an external
-      site (or sites) where the practice has reviews.</p>
       <ExternalRedirect headerText={headerText} bodyText={bodyText} disclaimerText={disclaimerText} buttonText={buttonText} />
     </div>
   );  

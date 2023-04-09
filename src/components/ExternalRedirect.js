@@ -2,6 +2,7 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) {
   return (
@@ -15,16 +16,29 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
             alignItems: 'center',
             '& > :not(style)': {
               width: 400,
-              my: 6,
+              mt: {xs: 6, md: 11},
             },
           }}
         >
           <Paper variant='outlined' sx={{
               height: 400,
+              textAlign: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              alignContent: 'center',
+              flexDirection: 'column',
+              '& > :not(style)': {
+                my: 4,
+                mx: 4,
+              },
             }}
           >
-            {headerText}
-            {bodyText} {/* Put this stuff in Typography!!? */}
+            <Typography variant='h3'>
+              {headerText}
+            </Typography>
+            <Typography variant='body1'>
+              {bodyText}
+            </Typography>
           </Paper>
           <Box
             sx={{
@@ -35,10 +49,16 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
               height: {xs: 100, md: 400},
             }}
           >
-            <p>{disclaimerText}</p>
-            <Button>
-              {buttonText}
+            <Button variant='contained'>
+              <Typography variant='h5'>{buttonText}</Typography>
             </Button>
+            <Typography variant='caption' sx={{
+                fontStyle: 'oblique',
+                my: 2,
+              }}
+            >
+              {disclaimerText}
+            </Typography>
           </Box>
         </Box>
       </Container>
