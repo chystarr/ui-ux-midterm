@@ -16,7 +16,7 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
             alignItems: 'center',
             '& > :not(style)': {
               width: 400,
-              mt: {xs: 6, md: 11},
+              mt: {md: 20},
             },
           }}
         >
@@ -27,6 +27,7 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
               justifyContent: 'center',
               alignContent: 'center',
               flexDirection: 'column',
+              mt: {xs: 14},
               '& > :not(style)': {
                 my: 4,
                 mx: 4,
@@ -47,9 +48,13 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
               alignItems:'center',
               flexDirection: 'column',
               height: {xs: 100, md: 400},
+              mt: {xs: 8},
             }}
           >
-            <Button variant='contained'>
+            <Button variant='contained' sx={{
+                mt: 2,
+              }}
+            >
               <Typography variant='h5'>{buttonText}</Typography>
             </Button>
             <Typography variant='caption' sx={{

@@ -17,7 +17,7 @@ function About() {
             '& > :not(style)': {
               width: 400,
               height: 400,
-              mt: {xs: 6, md: 11},
+              mt: {md: 20},
             },
           }}
         >
@@ -27,6 +27,7 @@ function About() {
               justifyContent: 'space-evenly',
               alignContent: 'center',
               flexDirection: 'column',
+              mt: {xs: 14},
               '& > :not(style)': {
                 mx: 4,
               },
@@ -39,7 +40,10 @@ function About() {
               {bodyText}
             </Typography>
           </Paper>
-          <Paper variant='outlined'>
+          <Paper variant='outlined' sx={{
+              mt: {xs: 8},
+            }}
+          >
             photo here
           </Paper>
         </Box>
