@@ -9,7 +9,16 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-
+    primary: {
+      main: '#ab2a40',
+    },
+    secondary: {
+      main: '#ab602a',
+    },
+    background: {
+      default: '#2aab80',
+      paper: '#fff8dc',
+    },
   },
   typography: {
     h3: {
@@ -22,12 +31,14 @@ const theme = createTheme({
         'Bakbak One',
       ].join(','),
       fontSize: '2rem',
+      color: '#000',
     },
     h6: {
       fontFamily: [
         'Bakbak One',
       ].join(','),
       fontSize: '1.75rem',
+      color: '#000',
     },
     body1: {
       fontFamily: [
@@ -49,13 +60,14 @@ const theme = createTheme({
       ].join(','),
       fontWeight: 600,
       fontSize: '1.15rem',
+      color: '#000',
     },
     caption: {
       fontFamily: [
         'Anuphan',
       ].join(','),
       fontWeight: 400,
-      fontSize: '0.9rem',
+      fontSize: '1rem',
     },
   },
 });

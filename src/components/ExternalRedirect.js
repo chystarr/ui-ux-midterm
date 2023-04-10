@@ -52,7 +52,7 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText, th
               mt: {xs: 8},
             }}
           >
-            <Button variant='contained' sx={{
+            <Button variant='contained' color='secondary' sx={{
                 mt: 3,
                 textDecoration: 'none',
                 textTransform: 'none',
@@ -60,9 +60,10 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText, th
             >
               <Typography variant='h5'>{buttonText}</Typography>
             </Button>
-            <Typography variant='caption' sx={{
+            <Typography variant='caption' align='center' sx={{
                 fontStyle: 'oblique',
                 my: 2,
+                width: 500,
               }}
             >
               {disclaimerText}
