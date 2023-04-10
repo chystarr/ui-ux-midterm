@@ -64,7 +64,7 @@ function Layout({ theme }) {
 
             {/*Smaller screen sizes*/}
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-              <IconButton size='large' onClick={handleOpenNavMenu} color='inherit'>
+              <IconButton size='large' color='#000' onClick={handleOpenNavMenu}>
                 <MenuIcon />
               </IconButton>
               <Menu
