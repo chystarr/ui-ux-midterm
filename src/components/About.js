@@ -2,13 +2,14 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@mui/material/styles';
 
 import office from './img/office.jpg';
 
-function About() {
+function About({ theme }) {
   const bodyText = "Dr. Anura holds a Doctor of Veterinary Medicine degree from NYU, and has been a leader in the field of frog medicine for over 20 years. She opened the NYC Frog Clinic in 2014 in order to provide accessible medical care to the city's favorite amphibians. Our clinic accepts most major types of pet insurance, and our staff is well-versed in caring for hundreds of different common pet frog species.";
   return (
-    <div> {/* Replace outer div element with ThemeProvider component later */}
+    <ThemeProvider theme={theme}>
       <Container>
         <Box
           sx={{
@@ -19,7 +20,6 @@ function About() {
             '& > :not(style)': {
               width: 400,
               height: 400,
-              mt: {md: 20},
             },
           }}
         >
@@ -29,7 +29,7 @@ function About() {
               justifyContent: 'space-evenly',
               alignContent: 'center',
               flexDirection: 'column',
-              mt: {xs: 14},
+              mt: {xs: 14, md: 12},
               '& > :not(style)': {
                 mx: 4,
               },
@@ -44,6 +44,7 @@ function About() {
           </Paper>
           <Box sx={{
               my: {xs: 8},
+              mt: {md: 20},
               backgroundImage: `url(${office})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
@@ -52,7 +53,7 @@ function About() {
           </Box>
         </Box>
       </Container>
-    </div>
+    </ThemeProvider>
   );  
 }
 

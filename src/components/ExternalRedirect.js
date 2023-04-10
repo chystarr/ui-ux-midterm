@@ -3,10 +3,11 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@mui/material/styles';
 
-function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) {
+function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText, theme }) {
   return (
-    <div> {/* Replace outer div element with ThemeProvider component later */}
+    <ThemeProvider theme={theme}>
       <Container>
         <Box
           sx={{
@@ -69,7 +70,7 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
           </Box>
         </Box>
       </Container>
-    </div>
+    </ThemeProvider>
   );  
 }
 

@@ -66,10 +66,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout theme={theme} />}>
           <Route index element={<Home theme={theme} />} />
-          <Route path="about" element={<About />} />
-          <Route path="appointments" element={<Appointments />} />
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="*" element={<Home />} />
+          <Route path="about" element={<About theme={theme} />} />
+          <Route path="appointments" element={<Appointments theme={theme} />} />
+          <Route path="reviews" element={<Reviews theme={theme} />} />
+          <Route path="*" element={<Home theme={theme} />} />
         </Route>
       </Routes>
     </div>
