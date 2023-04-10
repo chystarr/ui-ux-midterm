@@ -23,7 +23,7 @@ function About() {
             },
           }}
         >
-          <Paper variant='outlined' sx={{
+          <Paper elevation={3} sx={{
               textAlign: 'center',
               display: 'flex',
               justifyContent: 'space-evenly',
@@ -43,7 +43,7 @@ function About() {
             </Typography>
           </Paper>
           <Box sx={{
-              mt: {xs: 8},
+              my: {xs: 8},
               backgroundImage: `url(${office})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',

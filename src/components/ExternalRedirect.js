@@ -20,7 +20,7 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
             },
           }}
         >
-          <Paper variant='outlined' sx={{
+          <Paper elevation={3} sx={{
               height: 400,
               textAlign: 'center',
               display: 'flex',
@@ -52,7 +52,9 @@ function ExternalRedirect({ headerText, bodyText, disclaimerText, buttonText }) 
             }}
           >
             <Button variant='contained' sx={{
-                mt: 2,
+                mt: 3,
+                textDecoration: 'none',
+                textTransform: 'none',
               }}
             >
               <Typography variant='h5'>{buttonText}</Typography>

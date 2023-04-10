@@ -11,8 +11,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 
-function Layout() {
+function Layout({ theme }) {
   const pages = ['about', 'appointments', 'reviews'];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,8 +25,8 @@ function Layout() {
   };
 
   return (
-    <div>
-    <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <AppBar position="absolute">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -34,6 +35,7 @@ function Layout() {
             <Typography variant='h6' component={Link} to='/' sx={{
                 display: { xs: 'none', md: 'flex' },
                 textDecoration: 'none',
+                textTransform: 'none',
               }}
             >
               NYC Frog Clinic
@@ -50,9 +52,12 @@ function Layout() {
                     color: 'white',
                     display: 'block',
                     textDecoration: 'none',
+                    textTransform: 'none',
                   }}
                 >
-                  {page.substring(0, 1).toUpperCase() + page.substring(1)}
+                  <Typography variant='subtitle1'>
+                    {page.substring(0, 1).toUpperCase() + page.substring(1)}
+                  </Typography>
                 </Button>
               ))}
             </Box>
@@ -82,7 +87,7 @@ function Layout() {
               >
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu} component={Link} to={page}>
-                    <Typography textAlign="center">
+                    <Typography variant='body1' textAlign="center">
                       {page.substring(0, 1).toUpperCase() + page.substring(1)}
                     </Typography>
                   </MenuItem>
@@ -105,7 +110,7 @@ function Layout() {
         </Container>
       </AppBar>
       <Outlet />
-    </div>
+    </ThemeProvider>
   );
 }
 
