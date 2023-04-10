@@ -9,7 +9,7 @@ import background from './img/background.jpg';
 function Home({ theme }) {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{overflow: 'clip'}}> {/* Replace outer div element with ThemeProvider component later */}
+      <Box sx={{overflow: 'clip'}}>
         <CssBaseline />
         <Grid container rowSpacing={20} sx={{
             height: '100vh',
