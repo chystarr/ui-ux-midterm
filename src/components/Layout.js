@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function Layout() {
   const pages = ['about', 'appointments', 'reviews'];
@@ -24,7 +25,8 @@ function Layout() {
 
   return (
     <div>
-      <AppBar position="static">
+    <CssBaseline />
+      <AppBar position="absolute">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
 
