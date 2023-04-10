@@ -39,7 +39,9 @@ function Home() {
           </Box>
         </Grid>
         <Grid item xs={12} sx={{
-            display: 'flex', justifyContent: 'flex-end', alignContent: 'flex-end'
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignContent: 'flex-end'
           }}
         >
           <Box sx={{

@@ -3,6 +3,8 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
+import office from './img/office.jpg';
+
 function About() {
   const bodyText = "Dr. Anura holds a Doctor of Veterinary Medicine degree from NYU, and has been a leader in the field of frog medicine for over 20 years. She opened the NYC Frog Clinic in 2014 in order to provide accessible medical care to the city's favorite amphibians. Our clinic accepts most major types of pet insurance, and our staff is well-versed in caring for hundreds of different common pet frog species.";
   return (
@@ -40,12 +42,14 @@ function About() {
               {bodyText}
             </Typography>
           </Paper>
-          <Paper variant='outlined' sx={{
+          <Box sx={{
               mt: {xs: 8},
+              backgroundImage: `url(${office})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
             }}
           >
-            photo here
-          </Paper>
+          </Box>
         </Box>
       </Container>
     </div>
