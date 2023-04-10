@@ -45,14 +45,14 @@ function Layout() {
               }}
             >
               {pages.map((page) => (
-                <Button key={page} onClick={handleCloseNavMenu} sx={{
+                <Button key={page} onClick={handleCloseNavMenu} component={Link} to={page} sx={{
                     my: 2,
                     color: 'white',
                     display: 'block',
                     textDecoration: 'none',
                   }}
                 >
-                  <Link to={page}>{page}</Link>
+                  {page.substring(0, 1).toUpperCase() + page.substring(1)}
                 </Button>
               ))}
             </Box>
